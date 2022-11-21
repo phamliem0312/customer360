@@ -1,0 +1,12 @@
+{
+    "module": "EspoAcl",
+    "name": "EspoAcl}",
+    "description": "EspoAcl}",
+    "author": "phamliem0312",
+    "acceptableVersions": [
+        ">=5.9.0"
+    ],
+    "php": [
+        ">=7.2"
+    ]
+}

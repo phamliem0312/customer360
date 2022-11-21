@@ -1,0 +1,9 @@
+{
+    "controller": "customer360:controllers/customer",
+    "views": {
+        "detail": "customer360:views/customer/detail"
+    },
+    "recordViews": {
+        "detail": "customer360:views/customer/record/detail"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "Customer/:id": {
+        "params": {
+            "controller": "Customer",
+            "action": "test"
+        },
+        "order": 1
+    }
+}

@@ -1,7 +1,7 @@
 {
-    "module": "EspoAcl",
-    "name": "EspoAcl}",
-    "description": "EspoAcl}",
+    "module": "Espo Customer360",
+    "name": "Espo Customer360",
+    "description": "Espo Customer360",
     "author": "phamliem0312",
     "acceptableVersions": [
         ">=5.9.0"

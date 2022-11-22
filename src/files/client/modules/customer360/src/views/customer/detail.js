@@ -27,8 +27,6 @@ define('customer360:views/customer/detail', 'views/detail', function (Dep) {
                 o.readOnly = true;
             }
 
-            console.log( this.getRecordViewName());
-
             return this.createView('record', this.getRecordViewName(), o);
         },
 

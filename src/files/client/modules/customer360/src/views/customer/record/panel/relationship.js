@@ -26,35 +26,28 @@
  * these Appropriate Legal Notices must retain the display of the "EspoCRM" word.
  ************************************************************************/
 
- define('customer360:views/fields/enum-plus', 'views/fields/enum', function (Dep) {
+define('customer360:views/customer/record/panel/relationship',
+    'views/record/panels/relationship',
+    function (Dep) {
 
-    return Dep.extend({
+        return Dep.extend({
+            setup: function () {
+                this.defs = {
+                    link: ""
+                };
+                this.scope = 'Account';
+                this.model = {
+                    entityType: 'Account'
+                };
 
-        checkAvailability: function (entityType) {
-            var defs = this.scopesMetadataDefs[entityType] || {};
+                this.url = 'Account';
+                Dep.prototype.setup.call(this);
+            },
 
-            if (defs.entity && defs.object) {
-                return true;
+            afterRender: function () {
+                Dep.prototype.afterRender.call(this);
+
+                $('.panel-title span').html(this.options.defs.titleHtml);
             }
-        },
-
-        setupOptions: function () {
-            let entityDef = this.getMetadata().get(['entityDefs', this.entityType, 'fields', this.name])
-            this.wait(
-                this.ajaxGetRequest(`${entityDef.sourceEntity}?select=${entityDef.labelField},${entityDef.valueField}`).then(function (response) {
-                    response.list.forEach(function (option) {
-                        this.params.options.push(option[entityDef.valueField]);
-                        this.translatedOptions[option[entityDef.valueField]] = option[entityDef.labelField];   
-                    }.bind(this));
-                }.bind(this))
-            );
-        },
-
-        setup: function () {
-            this.params.options = [];
-            this.translatedOptions = {};
-
-            Dep.prototype.setup.call(this);
-        },
+        });
     });
-});

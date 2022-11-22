@@ -1,0 +1,1 @@
+<div class="panel">Panel 2</div>

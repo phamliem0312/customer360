@@ -17,9 +17,15 @@ define('customer360:views/customer/record/detail-extra', 'view', function (Dep) 
          * @inheritDoc
          */
         setupPanels: function () {
-            this.createView('panel5', 'customer360:views/customer/record/panel/panel5');
-            this.createView('panel6', 'customer360:views/customer/record/panel/panel6');
-            this.createView('panel7', 'customer360:views/customer/record/panel/panel7');
+            this.createView('panel5', 'customer360:views/customer/record/panel/panel5', {
+                el: this.getSelector() + " .panel-5"
+            });
+            this.createView('panel6', 'customer360:views/customer/record/panel/panel6', {
+                el: this.getSelector() + " .panel-6"
+            });
+            this.createView('panel7', 'customer360:views/customer/record/panel/panel7', {
+                el: this.getSelector() + " .panel-6"
+            });
         },
 
         init: function () {
@@ -36,6 +42,7 @@ define('customer360:views/customer/record/detail-extra', 'view', function (Dep) 
         },
 
         setup: function () {
+            Dep.prototype.setup.call(this);
             this.panelList = [];
 
             this.setupPanels();

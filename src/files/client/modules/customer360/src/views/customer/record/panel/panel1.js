@@ -65,7 +65,7 @@ define('customer360:views/customer/record/panel/panel1', ['views/record/panels-c
 
         setupPanelViews: function () {
             var p = {
-                "name": "contacts",
+                "name": "accounts",
                 "label": "Contact",
                 "title": "Contact",
                 "index": 5,
@@ -74,22 +74,22 @@ define('customer360:views/customer/record/panel/panel1', ['views/record/panels-c
                 "orderBy": "name",
                 "view": "customer360:views/customer/record/panel/relationship",
                 "hidden": false,
-                "actionsViewKey": "contactsActions",
+                "actionsViewKey": "accountsActions",
                 "tabNumber": -1,
                 "create": true,
                 "buttonList": [
                     {
                         "title": "Create",
                         "action": "createRelated",
-                        "link": "contacts",
+                        "link": "accounts",
                         "acl": "edit",
                         "html": "<span class=\"fas fa-plus\"></span>",
                         "data": {
-                            "link": "contacts"
+                            "link": "accounts"
                         }
                     }
                 ],
-                "titleHtml": "<span class=\"color-icon fas fa-square-full\" style=\"color: rgb(164, 197, 224);\"></span>&nbsp;Contacts"
+                "titleHtml": "<span class=\"color-icon fas fa-square-full\" style=\"color: rgb(164, 197, 224);\"></span>&nbsp;Accounts"
             }
             var name = p.name;
 

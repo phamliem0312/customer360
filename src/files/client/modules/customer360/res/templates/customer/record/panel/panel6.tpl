@@ -1,3 +1,3 @@
-<div class="panel">
+<div>
     <div class="record">{{{record}}}</div>
 </div>

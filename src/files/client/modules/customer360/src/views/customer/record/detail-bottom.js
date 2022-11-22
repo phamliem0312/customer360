@@ -54,12 +54,22 @@
          * @inheritDoc
          */
         setupPanels: function () {
-            this.createView('panel1', 'customer360:views/customer/record/panel/panel1', {
-                recordHelper: this.recordHelper
+            this.createView('panel-1', 'customer360:views/customer/record/panel/panel1', {
+                recordHelper: this.recordHelper,
+                el: this.getSelector() + ' .panel-1'
             });
-            this.createView('panel2', 'customer360:views/customer/record/panel/panel2');
-            this.createView('panel3', 'customer360:views/customer/record/panel/panel3');
-            this.createView('panel4', 'customer360:views/customer/record/panel/panel4');
+            this.createView('panel-2', 'customer360:views/customer/record/panel/panel2', {
+                recordHelper: this.recordHelper,
+                el: this.getSelector() + ' .panel-2'
+            });
+            this.createView('panel-3', 'customer360:views/customer/record/panel/panel3', {
+                recordHelper: this.recordHelper,
+                el: this.getSelector() + ' .panel-3'
+            });
+            this.createView('panel-4', 'customer360:views/customer/record/panel/panel4', {
+                recordHelper: this.recordHelper,
+                el: this.getSelector() + ' .panel-4'
+            });
         },
 
         init: function () {

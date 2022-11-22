@@ -36,7 +36,7 @@ define('customer360:views/customer/record/panel/panel6', ['views/record/panels-c
 
             this.getModelFactory().create('Account').then(model => {
                 this.model = model;
-                this.model.id = '637c4c2c839cd0a6c';
+                this.model.id = '637b99ee356072d6b';
 
                 this.listenTo(this.model, 'sync', () => {
 

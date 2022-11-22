@@ -16,25 +16,21 @@ define('customer360:views/customer/record/detail', 'views/record/detail', functi
             this.createExtraView(callback);
             this.createBottomView(callback);
         },
-        
+
         createExtraView: function (callback) {
             var el = this.options.el || '#' + (this.id);
-
-            this.getGridLayout((layout) => {
-                this.createView('extra', this.extraView, {
+            this.createView('extra', this.extraView, {
+                model: this.model,
+                scope: this.scope,
+                type: this.type,
+                el: el + ' .extra',
+                layoutData: {
                     model: this.model,
-                    scope: this.scope,
-                    type: this.type,
-                    _layout: layout,
-                    el: el + ' .extra',
-                    layoutData: {
-                        model: this.model,
-                    },
-                    recordHelper: this.recordHelper,
-                    recordViewObject: this,
-                    panelFieldListMap: this.panelFieldListMap,
-                }, callback);
-            });
+                },
+                recordHelper: this.recordHelper,
+                recordViewObject: this,
+                panelFieldListMap: this.panelFieldListMap,
+            }, callback);
         },
     });
 });
